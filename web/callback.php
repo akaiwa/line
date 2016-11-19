@@ -20,8 +20,9 @@ if($type == "sticker"){
 	];
 	
 	$res2 = [
-		"type" => "text",
-		"text" => "メッセージを送ってほしいな！"
+		"type" => "sticker",
+		"packageId" => "18",
+		"stickerId" => "2"
 	];
 	
 //メッセージが文字なら開始
