@@ -49,8 +49,8 @@ if($type != "text"){
 // 送信データ作成
 $post_data = [
 	"replyToken" => $replyToken,
-	"messages" => [$res1],
-	"messages" => [$res2]
+	"messages" => $res1,
+	"messages" => $res2
 ];
 
 
