@@ -266,8 +266,9 @@ else if ($text == 'Q10:はい' || $text == 'Q10:いいえ') {
 パートを紹介するよ♪\nこれから10個の質問をするから答えてね！♪"
         ]
     ]
-  ],
-	[
+  ];
+	
+　　$res2 = [
     "type" => "template",
     "altText" => "Q1:人付き合いが好き？（はい／いいえ）",
     "template" => [
@@ -287,12 +288,25 @@ else if ($text == 'Q10:はい' || $text == 'Q10:いいえ') {
         ]
     ]
   ];
+
+  $flag = 1;
 }
 
+
+if ($flag == 1) {
+	$post_data = [
+	"replyToken" => $replyToken,
+	"messages" => [$response_format_text],
+	"messages" => [$res2]
+	];
+	
+	$flag = 0;
+} else {
 $post_data = [
 	"replyToken" => $replyToken,
 	"messages" => [$response_format_text]
 	];
+}
 
 $ch = curl_init("https://api.line.me/v2/bot/message/reply");
 curl_setopt($ch, CURLOPT_POST, true);
