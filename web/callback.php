@@ -12,27 +12,45 @@ $text = $jsonObj->{"events"}[0]->{"message"}->{"text"};
 //ReplyToken取得
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 
-$response = [
-    "type" => "text",
-    "text" => "Q2:\n物事を客観的に考えるタイプ？",
-	"actions" => [
-		[
-			"type" => "message",
-			"label" => "はい",
-			"text" => "Q2:はい"
-		],
-		[
-			"type" => "message",
-			"label" => "いいえ",
-			"text" => "Q2:いいえ"
+//メッセージが文字以外なら何もせず終了
+if($type != "text"){
+	exit;
+	
+//メッセージが文字なら開始
+} else {
+	$response = [
+		"type" => "text",
+		"text" => "こんにちは！！\n僕ライト！くんです。ライト！\n
+		あなたにぴったりの保険のエキスパートを紹介するよ♪\nこれから10個の質問をするから答えてね！♪"
+	],
+	[
+		"type" => "template",
+		"altText" => "Q1:人付き合いが好き？（はい／いいえ）",
+		"template" => [
+			"type" => "confirm",
+			"text" => "Q1\n人付き合いが好き？",
+			"actions" => [
+				[
+					"type" => "message",
+					"label" => "はい",
+					"text" => "Q1:はい"
+				],
+				[
+					"type" => "message",
+					"label" => "いいえ",
+					"text" => "Q1:いいえ"
+				]
+			]
 		]
-	]
-];
+	];
+}
 
+
+// 送信データ作成
 $post_data = [
 	"replyToken" => $replyToken,
 	"messages" => [$response]
-	];
+];
 
 
 $ch = curl_init("https://api.line.me/v2/bot/message/reply");
