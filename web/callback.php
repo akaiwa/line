@@ -13,8 +13,20 @@ $text = $jsonObj->{"events"}[0]->{"message"}->{"text"};
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 
 $response = [
-    "type" => "text",
-    "text" => "Q2:\n物事を客観的に考えるタイプ？"
+    "type" => "confirm",
+    "text" => "Q2:\n物事を客観的に考えるタイプ？",
+	"actions" => [
+            [
+              "type" => "message",
+              "label" => "はい",
+              "text" => "Q2:はい"
+            ],
+            [
+              "type" => "message",
+              "label" => "いいえ",
+              "text" => "Q2:いいえ"
+            ]
+        ]
 ];
 
 $post_data = [
