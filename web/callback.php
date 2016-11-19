@@ -211,7 +211,50 @@ else if ($text == 'Q9:はい' || $text == 'Q9:いいえ') {
     ]
   ];
 }
-else if ($text == 'Q10:はい' || $text == 'Q10:いいえ') {
+else if ($text == 'めだま') {
+  $response_format_text = [
+    "type" => "template",
+    "altText" => "やき",
+    "template" => [
+        "type" => "confirm",
+        "text" => "やき",
+        "actions" => [
+            [
+              "type" => "message",
+              "label" => "すき",
+              "text" => "すき"
+            ],
+            [
+              "type" => "message",
+              "label" => "きらい",
+              "text" => "きらい"
+            ]
+        ]
+    ]
+  ];
+}
+else if ($text == 'やき') {
+  $response_format_text = [
+    "type" => "template",
+    "altText" => "にく",
+    "template" => [
+        "type" => "confirm",
+        "text" => "にく",
+        "actions" => [
+            [
+              "type" => "message",
+              "label" => "わかる",
+              "text" => "わかる"
+            ],
+            [
+              "type" => "message",
+              "label" => "そんなに",
+              "text" => "そんなに"
+            ]
+        ]
+    ]
+  ];
+} else {
 
   $response_format_text = [
     "type" => "template",
