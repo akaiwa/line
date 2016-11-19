@@ -126,7 +126,7 @@ else if ($text == 'Q5:はい' || $text == 'Q5:いいえ') {
 else if ($text == 'Q6:はい' || $text == 'Q6:いいえ') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "Q7:きちんと段階を踏んで話すタイプ？（はい／いいえ）",
+    "altText" => "ここなに？？？",
     "template" => [
         "type" => "confirm",
         "text" => "Q7:\nきちんと段階を踏んで話すタイプ？",
@@ -173,7 +173,7 @@ else if ($text == 'Q8:はい' || $text == 'Q8:いいえ') {
     "altText" => "Q9:物事は基本的に白黒はっきりつけたい派？（はい／いいえ）",
     "template" => [
         "type" => "confirm",
-        "text" => "Q9:\n物事は基本的に白黒はっきりつけたい派？"
+        "text" => "Q9:\n物事は基本的に白黒はっきりつけたい派？",
         "actions" => [
             [
               "type" => "message",
@@ -195,7 +195,7 @@ else if ($text == 'Q9:はい' || $text == 'Q9:いいえ') {
     "altText" => "Q10:何か保険で困っていることってある？（自由入力）",
     "template" => [
         "type" => "confirm",
-        "text" => "Q10:\n何か保険で困っていることってある？（自由入力）",
+        "text" => "Q10:\n何か保険で困っていることってある？（自由入力）"
     ]
   ];
 }
