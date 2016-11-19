@@ -196,65 +196,10 @@ else if ($text == 'Q9:はい' || $text == 'Q9:いいえ') {
     "template" => [
         "type" => "confirm",
         "text" => "Q10:\n何か保険で困っていることってある？（自由入力）",
-        "actions" => [
-            [
-              "type" => "message",
-              "label" => "はい",
-              "text" => "Q10:はい"
-            ],
-            [
-              "type" => "message",
-              "label" => "いいえ",
-              "text" => "Q10:いいえ"
-            ]
-        ]
     ]
   ];
 }
-else if ($text == 'めだま') {
-  $response_format_text = [
-    "type" => "template",
-    "altText" => "やき",
-    "template" => [
-        "type" => "confirm",
-        "text" => "やき",
-        "actions" => [
-            [
-              "type" => "message",
-              "label" => "すき",
-              "text" => "すき"
-            ],
-            [
-              "type" => "message",
-              "label" => "きらい",
-              "text" => "きらい"
-            ]
-        ]
-    ]
-  ];
-}
-else if ($text == 'やき') {
-  $response_format_text = [
-    "type" => "template",
-    "altText" => "にく",
-    "template" => [
-        "type" => "confirm",
-        "text" => "にく",
-        "actions" => [
-            [
-              "type" => "message",
-              "label" => "わかる",
-              "text" => "わかる"
-            ],
-            [
-              "type" => "message",
-              "label" => "そんなに",
-              "text" => "そんなに"
-            ]
-        ]
-    ]
-  ];
-} else {
+else if ($text == 'Q10:はい' || $text == 'Q10:いいえ') {
 
   $response_format_text = [
     "type" => "template",
@@ -304,7 +249,7 @@ else if ($text == 'やき') {
       ]
     ]
   ];
-} else if ($text == 'めだま'')  {
+} else　{
 
   $response_format_text = [
     "type" => "template",
