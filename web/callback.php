@@ -16,17 +16,17 @@ $response = [
     "type" => "confirm",
     "text" => "Q2:\n物事を客観的に考えるタイプ？",
 	"actions" => [
-            [
-              "type" => "message",
-              "label" => "はい",
-              "text" => "Q2:はい"
-            ],
-            [
-              "type" => "message",
-              "label" => "いいえ",
-              "text" => "Q2:いいえ"
-            ]
-        ]
+		[
+			"type" => "message",
+			"label" => "はい",
+			"text" => "Q2:はい"
+		],
+		[
+			"type" => "message",
+			"label" => "いいえ",
+			"text" => "Q2:いいえ"
+		]
+	]
 ];
 
 $post_data = [
