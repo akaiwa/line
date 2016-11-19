@@ -1,0 +1,12 @@
+{
+    "name": "#LINE Messaging API test PHP",
+    "description": "heroku 上にデプロイされる LINE Messaging APIのサーバースクリプト",
+    "repository": "https://github.com/exa-sonoda/sample01.git",
+    "logo": "https://github.com/hrmz/line-messagingapi-test/blob/master/web/img1.jpg?raw=true",
+    "keywords": ["php", "line-messaging-api"],
+    "env": {
+      "LINE_CHANNEL_ACCESS_TOKEN": {
+        "description": "Channel Access Token (LINE developers の Basic information で確認できます)"
+      }
+    }
+}
