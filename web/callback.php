@@ -1,6 +1,5 @@
 <?php
 $accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
-$flag = 0;
 
 
 //ユーザーからのメッセージ取得
@@ -51,29 +50,28 @@ if($type != "text"){
 	];
 } else if ($text == 'A2:はい' || $text == 'A2:いいえ') {
 	$res1 = [
-    "type" => "template",
-    "altText" => "Q3:机とか本棚は整理整頓されている方が好き？（はい／いいえ）",
-    "template" => [
-        "type" => "confirm",
-        "text" => "Q3:\n机とか本棚は整理整頓されている方が好き？",
-        "actions" => [
-            [
-              "type" => "message",
-              "label" => "はい",
-              "text" => "A3:はい"
-            ],
-            [
-              "type" => "message",
-              "label" => "いいえ",
-              "text" => "A3:いいえ"
-            ]
-        ]
-    ]
-  ];
-}
-else if ($text == 'A3:はい' || $text == 'A3:いいえ') {
-  $res1 = [
-    "type" => "template",
+		"type" => "template",
+		"altText" => "Q3:机とか本棚は整理整頓されている方が好き？（はい／いいえ）",
+		"template" => [
+			"type" => "confirm",
+			"text" => "Q3:\n机とか本棚は整理整頓されている方が好き？",
+			"actions" => [
+				[
+					"type" => "message",
+					"label" => "はい",
+					"text" => "A3:はい"
+				],
+				[
+					"type" => "message",
+					"label" => "いいえ",
+					"text" => "A3:いいえ"
+				]
+			]
+		]
+	];
+} else if ($text == 'A3:はい' || $text == 'A3:いいえ') {
+	$res1 = [
+		"type" => "template",
     "altText" => "Q4:新しいグループに早く馴染める方？（はい／いいえ）",
     "template" => [
         "type" => "confirm",
@@ -309,17 +307,15 @@ else if ($text == 'A10:はい' || $text == 'A10:いいえ') {
 			]
 		]
 	];
-	
-	global $flag = 1;
 }
 
 
 // 送信データ作成
-if ($flag == 1) {
-$post_data = [
-	"replyToken" => $replyToken,
-	"messages" => [$res1,$res2]
-];
+if ($flag) {
+	$post_data = [
+		"replyToken" => $replyToken,
+		"messages" => [$res1,$res2]
+	];
 } else {
 	$post_data = [
 		"replyToken" => $replyToken,
