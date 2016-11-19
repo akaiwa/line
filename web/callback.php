@@ -12,12 +12,22 @@ $text = $jsonObj->{"events"}[0]->{"message"}->{"text"};
 //ReplyToken取得
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 
-//メッセージが文字以外なら何もせず終了
-if($type != "text"){
-	exit;
+//メッセージが文字以外ならｎメッセージのみで終了
+if($type == "sticker"){
+	$res1 = [
+		"type" => "text",
+		"text" => "ごめんね・・・スタンプ送られても何もできないんだ・・・"
+	];
 	
 //メッセージが文字なら開始
 } else {
+	//セッションの開始（一番最初に記述）
+	session_start();
+	//まずグローバル変数を初期化
+	$_SESSION = array();
+	//セッションを破壊
+	session_destroy();
+	
 	$res1 = [
 		"type" => "text",
 		"text" => "こんにちは！！\n僕ライト！くんです。ライト！\nあなたにぴったりの保険のエキスパートを紹介するよ♪\nこれから10個の質問をするから答えてね！♪"
