@@ -195,7 +195,7 @@ else if ($text == 'Q9:はい' || $text == 'Q9:いいえ') {
     "altText" => "Q10:何か保険で困っていることってある？（自由入力）",
     "template" => [
         "type" => "confirm",
-        "text" => "Q10:\n何か保険で困っていることってある？（自由入力）",
+        "text" => "Q10:\n何か保険で困っていることってある？（自由入力）"
     ]
   ];
 }
@@ -249,8 +249,8 @@ else if ($text == 'Q10:はい' || $text == 'Q10:いいえ') {
       ]
     ]
   ];
-} else　{
-
+}
+else　{
   $response_format_text = [
     "type" => "template",
     "altText" => "Q1:人付き合いが好き？（はい／いいえ）",
