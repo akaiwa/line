@@ -201,42 +201,28 @@ else if ($text == 'A8:はい' || $text == 'A8:いいえ') {
         ]
     ]
   ];
-}
-else if ($text == 'A9:はい' || $text == 'A9:いいえ') {
-  $res1 = [
-    "type" => "template",
-    "altText" => "Q10:何か保険で困っていることってある？（自由入力）",
-    "template" => [
-        "type" => "confirm",
-        "text" => "Q10:\n何か保険で困っていることってある？（自由入力）",
-        "actions" => [
-            [
-              "type" => "message",
-              "label" => "はい",
-              "text" => "A10:はい"
-            ],
-            [
-              "type" => "message",
-              "label" => "いいえ",
-              "text" => "A10:いいえ"
-            ]
-        ]
-    ]
-  ];
-}
-else if ($text == 'A10:はい' || $text == 'A10:いいえ') {
+} else if ($text == 'A9:はい' || $text == 'A9:いいえ') {
 	$res1 = [
-    "type" => "template",
-    "altText" => "君にピッタリのマイライフプランアドバイザーはこの人たちだよ♪\n候補を３人ご案内しています。",
-    "template" => [
-      "type" => "carousel",
-      "columns" => [
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . 
-"/planner01.png",
-            "title" => "竹岩 祐子",
-            "text" => "この人にしますか？",
-            "actions" => [
+		"type" => "text",
+		"text" => "Q10:何か保険で困っていることってある？（自由入力）"
+	];
+} else if ($text == '保険わからない') {
+	$res1 = [
+		"type" => "text",
+		"text" => "君にピッタリのマイライフプランアドバイザーはこの人たちだよ♪\n候補を３人ご案内しています。"
+	];
+	
+	$res2 = [
+		"type" => "template",
+		"altText" => "君にピッタリのマイライフプランアドバイザーはこの人たちだよ♪\n候補を３人ご案内しています。",
+		"template" => [
+			"type" => "carousel",
+			"columns" => [
+				[
+					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/planner01.png",
+					"title" => "竹岩 祐子",
+					"text" => "この人にしますか？",
+					"actions" => [
               [
                   "type" => "uri",
                   "label" => "相談する",
