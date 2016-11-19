@@ -295,8 +295,7 @@ else if ($text == 'Q10:はい' || $text == 'Q10:いいえ') {
 if ($flag == 1) {
 	$post_data = [
 	"replyToken" => $replyToken,
-	"messages" => [$response_format_text],
-	"messages" => [$res2]
+	"messages" => [$response_format_text, $res2]
 	];
 	
 	$flag = 0;
