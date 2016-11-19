@@ -311,7 +311,7 @@ else if ($text == 'A10:はい' || $text == 'A10:いいえ') {
 
 
 // 送信データ作成
-if ($flag) {
+if ($res2) {
 	$post_data = [
 		"replyToken" => $replyToken,
 		"messages" => [$res1,$res2]
