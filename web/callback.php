@@ -195,7 +195,19 @@ else if ($text == 'Q9:はい' || $text == 'Q9:いいえ') {
     "altText" => "Q10:何か保険で困っていることってある？（自由入力）",
     "template" => [
         "type" => "confirm",
-        "text" => "Q10:\n何か保険で困っていることってある？（自由入力）"
+        "text" => "Q10:\n何か保険で困っていることってある？（自由入力）",
+	    "actions" => [
+            [
+              "type" => "message",
+              "label" => "はい",
+              "text" => "Q9:はい"
+            ],
+            [
+              "type" => "message",
+              "label" => "いいえ",
+              "text" => "Q9:いいえ"
+            ]
+        ]
     ]
   ];
 }
