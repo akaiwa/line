@@ -262,49 +262,17 @@ else if ($text == 'Q10:はい' || $text == 'Q10:いいえ') {
     "altText" => "初期メッセージ",
     "template" => [
         "type" => "text",
-        "text" => "こんにちは！！\n僕ライト！くんです。ライト！\nあなたにぴったりの保険のエキス
-パートを紹介するよ♪\nこれから10個の質問をするから答えてね！♪"
-        ]
+        "text" => "こんにちは！！\n僕ライト！くんです。ライト！\nあなたにぴったりの保険のエキスパートを紹介するよ♪\nこれから10個の質問をするから答えてね！♪\n\nQ1:\n人付き合いが好き？"
+        ],	  
   ];
-	
-　　$res2 = [
-    "type" => "template",
-    "altText" => "Q1:人付き合いが好き？（はい／いいえ）",
-    "template" => [
-        "type" => "confirm",
-        "text" => "Q1:\n人付き合いが好き？",
-        "actions" => [
-            [
-              "type" => "message",
-              "label" => "はい",
-              "text" => "Q1:はい"
-            ],
-            [
-              "type" => "message",
-              "label" => "いいえ",
-              "text" => "Q1:いいえ"
-            ]
-        ]
-    ]
-  ];
-
-  $flag = 1;
 }
 
 
-if ($flag == 1) {
-	$post_data = [
-	"replyToken" => $replyToken,
-	"messages" => [$response_format_text, $res2]
-	];
-	
-	$flag = 0;
-} else {
 $post_data = [
 	"replyToken" => $replyToken,
 	"messages" => [$response_format_text]
 	];
-}
+
 
 $ch = curl_init("https://api.line.me/v2/bot/message/reply");
 curl_setopt($ch, CURLOPT_POST, true);
