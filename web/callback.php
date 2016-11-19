@@ -1,5 +1,6 @@
 <?php
 $accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
+$flag = 0;
 
 
 //ユーザーからのメッセージ取得
@@ -27,29 +28,29 @@ if($type != "text"){
 	
 //メッセージが文字なら開始
 } else if ($text == 'A1:はい' || $text == 'A1:いいえ') {
-	$response = [
-    "type" => "template",
-    "altText" => "Q2:物事を客観的に考えるタイプ？（はい／いいえ）",
-    "template" => [
-        "type" => "confirm",
-        "text" => "Q2:\n物事を客観的に考えるタイプ？",
-        "actions" => [
-            [
-              "type" => "message",
-              "label" => "はい",
-              "text" => "A2:はい"
-            ],
-            [
-              "type" => "message",
-              "label" => "いいえ",
-              "text" => "A2:いいえ"
-            ]
-        ]
-    ]
-  ];
-}
-else if ($text == 'A2:はい' || $text == 'A2:いいえ') {
-  $response = [
+	
+	$res1 = [
+		"type" => "template",
+		"altText" => "Q2:物事を客観的に考えるタイプ？（はい／いいえ）",
+		"template" => [
+			"type" => "confirm",
+			"text" => "Q2:\n物事を客観的に考えるタイプ？",
+			"actions" => [
+				[
+					"type" => "message",
+					"label" => "はい",
+					"text" => "A2:はい"
+				],
+				[
+					"type" => "message",
+					"label" => "いいえ",
+					"text" => "A2:いいえ"
+				]
+			]
+		]
+	];
+} else if ($text == 'A2:はい' || $text == 'A2:いいえ') {
+	$res1 = [
     "type" => "template",
     "altText" => "Q3:机とか本棚は整理整頓されている方が好き？（はい／いいえ）",
     "template" => [
@@ -71,7 +72,7 @@ else if ($text == 'A2:はい' || $text == 'A2:いいえ') {
   ];
 }
 else if ($text == 'A3:はい' || $text == 'A3:いいえ') {
-  $response = [
+  $res1 = [
     "type" => "template",
     "altText" => "Q4:新しいグループに早く馴染める方？（はい／いいえ）",
     "template" => [
@@ -93,7 +94,7 @@ else if ($text == 'A3:はい' || $text == 'A3:いいえ') {
   ];
 }
 else if ($text == 'A4:はい' || $text == 'A4:いいえ') {
-  $response = [
+  $res1 = [
     "type" => "template",
     "altText" => 
 "Q5:ひとつひとつ物事を終わらせてから次の事をするタイプ？（はい／いいえ）",
@@ -116,7 +117,7 @@ else if ($text == 'A4:はい' || $text == 'A4:いいえ') {
   ];
 }
 else if ($text == 'A5:はい' || $text == 'A5:いいえ') {
-  $response = [
+  $res1 = [
     "type" => "template",
     "altText" => "Q6:休みの日は友達や同僚と過ごすことが多い？（はい／いいえ）",
     "template" => [
@@ -138,7 +139,7 @@ else if ($text == 'A5:はい' || $text == 'A5:いいえ') {
   ];
 }
 else if ($text == 'A6:はい' || $text == 'A6:いいえ') {
-  $response = [
+  $res1 = [
     "type" => "template",
     "altText" => "Q7:きちんと段階を踏んで話すタイプ？（はい／いいえ）",
     "template" => [
@@ -160,7 +161,7 @@ else if ($text == 'A6:はい' || $text == 'A6:いいえ') {
   ];
 }
 else if ($text == 'A7:はい' || $text == 'A7:いいえ') {
-  $response = [
+  $res1 = [
     "type" => "template",
     "altText" => "Q8:他人の悩みに共感しやすい？（はい／いいえ）",
     "template" => [
@@ -182,7 +183,7 @@ else if ($text == 'A7:はい' || $text == 'A7:いいえ') {
   ];
 }
 else if ($text == 'A8:はい' || $text == 'A8:いいえ') {
-  $response = [
+  $res1 = [
     "type" => "template",
     "altText" => "Q9:物事は基本的に白黒はっきりつけたい派？（はい／いいえ）",
     "template" => [
@@ -204,7 +205,7 @@ else if ($text == 'A8:はい' || $text == 'A8:いいえ') {
   ];
 }
 else if ($text == 'A9:はい' || $text == 'A9:いいえ') {
-  $response = [
+  $res1 = [
     "type" => "template",
     "altText" => "Q10:何か保険で困っていることってある？（自由入力）",
     "template" => [
@@ -226,8 +227,7 @@ else if ($text == 'A9:はい' || $text == 'A9:いいえ') {
   ];
 }
 else if ($text == 'A10:はい' || $text == 'A10:いいえ') {
-
-  $response = [
+	$res1 = [
     "type" => "template",
     "altText" => "君にピッタリのマイライフプランアドバイザーはこの人たちだよ♪\n候補を３人ご案内しています。",
     "template" => [
@@ -310,7 +310,7 @@ else if ($text == 'A10:はい' || $text == 'A10:いいえ') {
 		]
 	];
 	
-	$flag = 1;
+	global $flag = 1;
 }
 
 
