@@ -236,9 +236,22 @@ if($type != "text"){
 		]
 	];
 } else {
+	$base_url = 'https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/74100fx119-nlc-426/classify?text=';
+	
+	$curl = curl_init();
+	curl_setopt($curl, CURLOPT_URL, $base_url.$text);
+	curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
+	curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false); // 証明書の検証を行わない
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  // curl_execの結果を文字列で返す
+
+	$nlcres = curl_exec($curl);
+	$result = json_decode($response, true);
+	
+	curl_close($curl);
+		
 	$res1 = [
 		"type" => "text",
-		"text" => "君にピッタリのマイライフプランアドバイザーはこの人たちだよ♪\n候補を３人ご案内しています。"
+		"text" => $top_class
 	];
 	
 	$res2 = [
