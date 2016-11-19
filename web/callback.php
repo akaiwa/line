@@ -50,7 +50,7 @@ if($type != "text"){
 // 送信データ作成
 $post_data = [
 	"replyToken" => $replyToken,
-	"messages" => [$response]
+	"messages" => [$res1],[$res2]
 ];
 
 
