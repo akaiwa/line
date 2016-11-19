@@ -173,7 +173,7 @@ else if ($text == 'Q8:はい' || $text == 'Q8:いいえ') {
     "altText" => "Q9:物事は基本的に白黒はっきりつけたい派？（はい／いいえ）",
     "template" => [
         "type" => "confirm",
-        "text" => "Q9:\n物事は基本的に白黒はっきりつけたい派？",
+        "text" => "Q9:\n物事は基本的に白黒はっきりつけたい派？"
         "actions" => [
             [
               "type" => "message",
