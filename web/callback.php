@@ -261,7 +261,7 @@ else if ($text == 'Q10:はい' || $text == 'Q10:いいえ') {
       ]
     ]
   ];
-} else {
+} else if ($text == 'めだま'')  {
 
   $response_format_text = [
     "type" => "template",
