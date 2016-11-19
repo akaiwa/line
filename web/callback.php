@@ -321,8 +321,10 @@ $post_data = [
 	"messages" => [$res1,$res2]
 ];
 } else {
-	"replyToken" => $replyToken,
-	"messages" => [$res1]
+	$post_data = [
+		"replyToken" => $replyToken,
+		"messages" => [$res1]
+	];
 }
 
 
