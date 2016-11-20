@@ -314,6 +314,64 @@ if($type != "text"){
 		"type" => "text",
 		"text" => "そっかぁ・・・\nまた今度困ったことがあったら呼んでね！ライト！"
 	];
+} else if ($text == '赤岩さんこんにちは！\nマイライフプランアドバイザーの竹岩です！') {
+	$res1 = [
+		"type" => "text",
+		"text" => "アドバイザーは個別LINEへの返信は出来ないから気を付けてね！"
+	];
+} else if ($text == '新宿でお願いします') {
+	$res1 = [
+		"type" => "text",
+		"text" => "新宿のお店を紹介するね！"
+	];
+	
+	$res2 = [
+		"type" => "template",
+		"altText" => "新宿のお店",
+		"template" => [
+			"type" => "carousel",
+			"columns" => [
+				[
+					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/mise1.png",
+					"text" => "カフェ○○",
+					"actions" => [
+						[
+							"type" => "text",
+							"label" => "ここにする",
+							"text" => "1番"
+						]
+					]
+				],
+				[
+					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/mise2.png",
+					"text" => "ファストフード△△",
+					"actions" => [
+						[
+							"type" => "text",
+							"label" => "ここにする",
+							"text" => "2番"
+						]
+					]
+				],
+				[
+					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/mise3.png",
+					"text" => "ファミリーレストラン××",
+					"actions" => [
+						[
+							"type" => "text",
+							"label" => "ここにする",
+							"text" => "3番"
+						]
+					]
+				]
+			]
+		]
+	];
+} else if ($text == '1番') {
+	$res1 = [
+		"type" => "text",
+		"text" => "20日14時、新宿のカフェ○○だね！\nお悩み解決できるよう僕もがんばるよ！"
+	];
 } else if ($text == '応答セヨ') {	
 	$res1 = [
 		"type" => "text",
