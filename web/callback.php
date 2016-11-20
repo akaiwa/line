@@ -30,10 +30,10 @@ if($type != "text"){
 	
 	$res1 = [
 		"type" => "template",
-		"altText" => "Q2:物事を客観的に考えるタイプ？（はい／いいえ）",
+		"altText" => "物事を客観的に考えるタイプ？（はい／いいえ）",
 		"template" => [
 			"type" => "confirm",
-			"text" => "Q2:\n物事を客観的に考えるタイプ？",
+			"text" => "物事を客観的に考えるタイプ？",
 			"actions" => [
 				[
 					"type" => "message",
@@ -51,10 +51,10 @@ if($type != "text"){
 } else if ($text == 'A2:はい' || $text == 'A2:いいえ') {
 	$res1 = [
 		"type" => "template",
-		"altText" => "Q3:机とか本棚は整理整頓されている方が好き？（はい／いいえ）",
+		"altText" => "机とか本棚は整理整頓されている方が好き？（はい／いいえ）",
 		"template" => [
 			"type" => "confirm",
-			"text" => "Q3:\n机とか本棚は整理整頓されている方が好き？",
+			"text" => "机とか本棚は整理整頓されている方が好き？",
 			"actions" => [
 				[
 					"type" => "message",
@@ -72,10 +72,10 @@ if($type != "text"){
 } else if ($text == 'A3:はい' || $text == 'A3:いいえ') {
 	$res1 = [
 		"type" => "template",
-		"altText" => "Q4:新しいグループに早く馴染める方？（はい／いいえ）",
+		"altText" => "新しいグループに早く馴染める方？（はい／いいえ）",
 		"template" => [
 			"type" => "confirm",
-			"text" => "Q4:\n新しいグループに早く馴染める方？",
+			"text" => "新しいグループに早く馴染める方？",
 			"actions" => [
 				[
 					"type" => "message",
@@ -93,10 +93,10 @@ if($type != "text"){
 } else if ($text == 'A4:はい' || $text == 'A4:いいえ') {
 	$res1 = [
 		"type" => "template",
-		"altText" => "Q5:ひとつひとつ物事を終わらせてから次の事をするタイプ？（はい／いいえ）",
+		"altText" => "ひとつひとつ物事を終わらせてから次の事をするタイプ？（はい／いいえ）",
 		"template" => [
 			"type" => "confirm",
-			"text" => "Q5:\nひとつひとつ物事を終わらせてから次の事をするタイプ？",
+			"text" => "ひとつひとつ物事を終わらせてから次の事をするタイプ？",
 			"actions" => [
 				[
 					"type" => "message",
@@ -114,10 +114,10 @@ if($type != "text"){
 } else if ($text == 'A5:はい' || $text == 'A5:いいえ') {
 	$res1 = [
 		"type" => "template",
-		"altText" => "Q6:休みの日は友達や同僚と過ごすことが多い？（はい／いいえ）",
+		"altText" => "休みの日は友達や同僚と過ごすことが多い？（はい／いいえ）",
 		"template" => [
 			"type" => "confirm",
-			"text" => "Q6:\n休みの日は友達や同僚と過ごすことが多い？",
+			"text" => "休みの日は友達や同僚と過ごすことが多い？",
 			"actions" => [
 				[
 					"type" => "message",
@@ -135,10 +135,10 @@ if($type != "text"){
 } else if ($text == 'A6:はい' || $text == 'A6:いいえ') {
 	$res1 = [
 		"type" => "template",
-		"altText" => "Q7:きちんと段階を踏んで話すタイプ？（はい／いいえ）",
+		"altText" => "きちんと段階を踏んで話すタイプ？（はい／いいえ）",
 		"template" => [
 			"type" => "confirm",
-			"text" => "Q7:\nきちんと段階を踏んで話すタイプ？",
+			"text" => "きちんと段階を踏んで話すタイプ？",
 			"actions" => [
 				[
 					"type" => "message",
@@ -156,10 +156,10 @@ if($type != "text"){
 } else if ($text == 'A7:はい' || $text == 'A7:いいえ') {
 	$res1 = [
 		"type" => "template",
-		"altText" => "Q8:他人の悩みに共感しやすい？（はい／いいえ）",
+		"altText" => "他人の悩みに共感しやすい？（はい／いいえ）",
 		"template" => [
 			"type" => "confirm",
-			"text" => "Q8:\n他人の悩みに共感しやすい？",
+			"text" => "他人の悩みに共感しやすい？",
 			"actions" => [
 				[
 					"type" => "message",
@@ -177,10 +177,10 @@ if($type != "text"){
 } else if ($text == 'A8:はい' || $text == 'A8:いいえ') {
 	$res1 = [
 		"type" => "template",
-		"altText" => "Q9:物事は基本的に白黒はっきりつけたい派？（はい／いいえ）",
+		"altText" => "物事は基本的に白黒はっきりつけたい派？（はい／いいえ）",
 		"template" => [
 			"type" => "confirm",
-			"text" => "Q9:\n物事は基本的に白黒はっきりつけたい派？",
+			"text" => "物事は基本的に白黒はっきりつけたい派？",
 			"actions" => [
 				[
 					"type" => "message",
@@ -198,29 +198,118 @@ if($type != "text"){
 } else if ($text == 'A9:はい' || $text == 'A9:いいえ') {
 	$res1 = [
 		"type" => "text",
-		"text" => "Q10:何か保険で困っていることってある？（自由入力）"
+		"text" => "君にピッタリのマイライフプランアドバイザーはこの人たちだよ♪\n候補が３人いるんだけど、どのアドバイザーさんがいいかな？"
 	];
 	
-	// 相談開始をしたい言葉
-} else if ($text == '相談開始'){
-	//セッションの開始（一番最初に記述）
-// 	session_start();
-	//まずグローバル変数を初期化
-// 	$_SESSION = array();
-	//セッションを破壊
-// 	session_destroy();
+	$res2 = [
+		"type" => "text",
+		"text" => "「相談する」をタップすると君と僕と選んだアドバイザーさんのLINEグループが作成されるよ！"
+	];
 	
+	$res3 = [
+		"type" => "template",
+		"altText" => "君にピッタリのマイライフプランアドバイザーはこの人たちだよ♪\n候補を３人ご案内しています。",
+		"template" => [
+			"type" => "carousel",
+			"columns" => [
+				[
+					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/planner01.png",
+					"title" => "竹岩 祐子",
+					"text" => "この人にする？",
+					"actions" => [
+						[
+							"type" => "uri",
+							"label" => "相談する",
+							"uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+						]
+					]
+				],
+				[
+					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/planner02.png",
+					"title" => "福田 泰三",
+					"text" => "この人にする？",
+					"actions" => [
+						[
+							"type" => "uri",
+							"label" => "相談する",
+							"uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+						]
+					]
+				],
+				[
+					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/planner03.png",
+					"title" => "保井 花子",
+					"text" => "この人にする？",
+					"actions" => [
+						[
+							"type" => "uri",
+							"label" => "相談する",
+							"uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+						]
+					]
+				]
+			]
+		]
+	];
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	// 相談開始をしたい言葉
+} else if ($text == '相談開始'){	
 	$res1 = [
 		"type" => "text",
-		"text" => "こんにちは！！\n僕ライト！くんです。ライト！\nあなたにぴったりの保険のエキスパートを紹介するよ♪\nこれから10個の質問をするから答えてね！♪"
+		"text" => "こんにちは！！\n僕ライト！くんです。ライト！\n"
 	];
 	
 	$res2 = [
 		"type" => "template",
-		"altText" => "Q1:人付き合いが好き？（はい／いいえ）",
+		"altText" => "保険で何か悩んでいることとかあるかな？",
 		"template" => [
 			"type" => "confirm",
-			"text" => "Q1\n人付き合いが好き？",
+			"text" => "保険で何か悩んでいることとかあるかな？",
+			"actions" => [
+				[
+					"type" => "message",
+					"label" => "ある",
+					"text" => "ある"
+				],
+				[
+					"type" => "message",
+					"label" => "ない",
+					"text" => "ない"
+				]
+			]
+		]
+	];
+} else if ($text == 'ある') {
+	$res1 = [
+		"type" => "text",
+		"text" => "どんな悩みなのか聞かせてよ！できることなら力になるよ！"
+	];
+} else if ($text == 'ない') {
+	$res1 = [
+		"type" => "text",
+		"text" => "悩んでないのなら大丈夫だね！\n安心したよ！ライト！"
+	];
+} else if ($text == '紹介して！') {
+	$res1 = [
+		"type" => "text",
+		"text" => "そしたら今からいくつか質問をするから、それに答えてね！\n相性バッチリ！のマイライフプランアドバイザーを見つけるよ！"
+	];
+	
+	$res2 = [
+		"type" => "template",
+		"altText" => "人付き合いは好き？",
+		"template" => [
+			"type" => "confirm",
+			"text" => "人付き合いは好き？",
 			"actions" => [
 				[
 					"type" => "message",
@@ -235,73 +324,33 @@ if($type != "text"){
 			]
 		]
 	];
-} else {
-//	$curlnlc = curl_init("https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/74100fx119-nlc-426/classify?text=");
-	
-//	curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
-//	curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false); // 証明書の検証を行わない
-//	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  // curl_execの結果を文字列で返す
-
-//	$nlcres = curl_exec($curl);
-//	$result = json_decode($nlcres, true);
-	
-//	curl_close($curl);
-
-	$url = "https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/74100fx119-nlc-426/classify?text=".$text
-	$nlcres = file_get_contents($url);
-	$result = json_decode($nlcres, true);
-	
+} else if ($text == '今はいいや') {
 	$res1 = [
 		"type" => "text",
-		"text" => $result->top_class
+		"text" => "そっかぁ・・・\nまた今度困ったことがあったら呼んでね！ライト！"
+	];
+} else {	
+	$res1 = [
+		"type" => "text",
+		"text" => "NLCからの応答"
 	];
 	
 	$res2 = [
-		"type" => "text",
-		"text" => "君にピッタリのマイライフプランアドバイザーはこの人たちだよ♪\n候補を３人ご案内しています。"
-	];
-	
-	$res3 = [
 		"type" => "template",
-		"altText" => "君にピッタリのマイライフプランアドバイザーはこの人たちだよ♪\n候補を３人ご案内しています。",
+		"altText" => "よかったら君にピッタリのマイライフプランアドバイザーを紹介させてほしいんだけど、どうかな？",
 		"template" => [
-			"type" => "carousel",
-			"columns" => [
+			"type" => "confirm",
+			"text" => "よかったら君にピッタリのマイライフプランアドバイザーを紹介させてほしいんだけど、どうかな？",
+			"actions" => [
 				[
-					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/planner01.png",
-					"title" => "竹岩 祐子",
-					"text" => "この人にしますか？",
-					"actions" => [
-						[
-							"type" => "uri",
-							"label" => "相談する",
-							"uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
-						]
-					]
+					"type" => "message",
+					"label" => "紹介して！",
+					"text" => "紹介して！"
 				],
 				[
-					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/planner02.png",
-					"title" => "福田 泰三",
-					"text" => "この人にしますか？",
-					"actions" => [
-						[
-							"type" => "uri",
-							"label" => "相談する",
-							"uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
-						]
-					]
-				],
-				[
-					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/planner03.png",
-					"title" => "保井 花子",
-					"text" => "この人にしますか？",
-					"actions" => [
-						[
-							"type" => "uri",
-							"label" => "相談する",
-							"uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
-						]
-					]
+					"type" => "message",
+					"label" => "今はいいや",
+					"text" => "今はいいや"
 				]
 			]
 		]
