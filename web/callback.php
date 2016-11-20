@@ -314,7 +314,7 @@ if($type != "text"){
 		"type" => "text",
 		"text" => "そっかぁ・・・\nまた今度困ったことがあったら呼んでね！ライト！"
 	];
-} else {	
+} else if ($text == '応答セヨ') {	
 	$res1 = [
 		"type" => "text",
 		"text" => "NLCからの応答"
