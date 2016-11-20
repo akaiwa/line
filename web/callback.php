@@ -21,8 +21,8 @@ if($type != "text"){
 	
 	$res2 = [
 		"type" => "sticker",
-		"packageId" => "18",
-		"stickerId" => "2"
+		"packageId" => "2",
+		"stickerId" => "18"
 	];
 	
 //メッセージが文字なら開始
@@ -265,7 +265,7 @@ if($type != "text"){
 } else if ($text == '相談開始'){	
 	$res1 = [
 		"type" => "text",
-		"text" => "こんにちは！！\n僕ライト！くんです。ライト！(lightbulb)"
+		"text" => "こんにちは！！\n僕ライト！くんです。ライト！"
 	];
 	
 	$res2 = [
@@ -273,7 +273,7 @@ if($type != "text"){
 		"altText" => "保険で何か悩んでいることとかあるかな？",
 		"template" => [
 			"type" => "confirm",
-			"text" => "保険で何か悩んでいることとかあるかな？(smile)",
+			"text" => "保険で何か悩んでいることとかあるかな？",
 			"actions" => [
 				[
 					"type" => "message",
