@@ -220,7 +220,7 @@ if($type != "text"){
 				],
 				[
 					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/eishoku2.png",
-					"title" => "福田 泰三",
+					"title" => "福田 泰造",
 					"text" => "この人にする？",
 					"actions" => [
 						[
@@ -232,7 +232,7 @@ if($type != "text"){
 				],
 				[
 					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/eishoku3.png",
-					"title" => "保井 花子",
+					"title" => "佐藤 誠子",
 					"text" => "この人にする？",
 					"actions" => [
 						[
