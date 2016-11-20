@@ -334,10 +334,11 @@ if($type != "text"){
 				[
 					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/mise1.png",
 					"title" => "カフェA",
-					"text" => "ここにする",
+					"text" => "ここにする？",
 					"actions" => [
 						[
 							"type" => "text",
+							"label" => "ここに決定",
 							"text" => "1番"
 						]
 					]
@@ -345,10 +346,11 @@ if($type != "text"){
 				[
 					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/mise2.png",
 					"title" => "ファストフードB",
-					"text" => "ここにする",
+					"text" => "ここにする？",
 					"actions" => [
 						[
 							"type" => "text",
+							"label" => "ここに決定",
 							"text" => "2番"
 						]
 					]
@@ -356,10 +358,11 @@ if($type != "text"){
 				[
 					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/mise3.png",
 					"title" => "ファミリーレストランC",
-					"text" => "ここにする",
+					"text" => "ここにする？",
 					"actions" => [
 						[
 							"type" => "text",
+							"label" => "ここに決定",
 							"text" => "3番"
 						]
 					]
