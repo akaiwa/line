@@ -236,21 +236,21 @@ if($type != "text"){
 		]
 	];
 } else {
-	$curlnlc = curl_init("https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/74100fx119-nlc-426/classify?text=");
+//	$curlnlc = curl_init("https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/74100fx119-nlc-426/classify?text=");
 	
-	curl_setopt($curl, CURLOPT_URL, $base_url.$text);
-	curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
-	curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false); // 証明書の検証を行わない
-	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  // curl_execの結果を文字列で返す
+//	curl_setopt($curl, CURLOPT_URL, $base_url.$text);
+//	curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
+//	curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false); // 証明書の検証を行わない
+//	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  // curl_execの結果を文字列で返す
 
-	$nlcres = curl_exec($curl);
-	$result = json_decode($nlcres, true);
+//	$nlcres = curl_exec($curl);
+//	$result = json_decode($nlcres, true);
 	
-	curl_close($curl);
+//	curl_close($curl);
 		
 	$res1 = [
 		"type" => "text",
-		"text" => $top_class
+		"text" => "NLCからのレスポンス"
 	];
 	
 	$res2 = [
