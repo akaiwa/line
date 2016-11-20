@@ -16,7 +16,7 @@ $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 if($type != "text"){
 	$res1 = [
 		"type" => "text",
-		"text" => "ｊメッセージじゃないのを送られても何もできないんだ・・・"
+		"text" => "メッセージじゃないのを送られても何もできないんだ・・・"
 	];
 	
 	$res2 = [
@@ -202,7 +202,7 @@ if($type != "text"){
 	];
 	
 	// 相談開始をしたい言葉
-} else if ($text == 'めだま'){
+} else if ($text == '相談開始'){
 	//セッションの開始（一番最初に記述）
 // 	session_start();
 	//まずグローバル変数を初期化
@@ -236,16 +236,15 @@ if($type != "text"){
 		]
 	];
 } else {
-	$base_url = 'https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/74100fx119-nlc-426/classify?text=';
+	$curlnlc = curl_init("https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/74100fx119-nlc-426/classify?text=");
 	
-	$curl = curl_init();
 	curl_setopt($curl, CURLOPT_URL, $base_url.$text);
 	curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
 	curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false); // 証明書の検証を行わない
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  // curl_execの結果を文字列で返す
 
 	$nlcres = curl_exec($curl);
-	$result = json_decode($response, true);
+	$result = json_decode($nlcres, true);
 	
 	curl_close($curl);
 		
