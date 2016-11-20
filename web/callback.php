@@ -16,13 +16,7 @@ $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 if($type != "text"){
 	$res1 = [
 		"type" => "text",
-		"text" => "メッセージじゃないのを送られても何もできないんだ・・・"
-	];
-	
-	$res2 = [
-		"type" => "sticker",
-		"packageId" => "2",
-		"stickerId" => "18"
+		"text" => "ごめんね、メッセージじゃないのを送られても何もできないんだ・・・"
 	];
 	
 //メッセージが文字なら開始
@@ -198,7 +192,7 @@ if($type != "text"){
 } else if ($text == 'A9:はい' || $text == 'A9:いいえ') {
 	$res1 = [
 		"type" => "text",
-		"text" => "君にピッタリのマイライフプランアドバイザーはこの人たちだよ♪\n候補が３人いるんだけど、どのアドバイザーさんがいいかな？(happy)"
+		"text" => "君にピッタリのマイライフプランアドバイザーはこの人たちだよ♪\n候補が３人いるんだけど、どのアドバイザーさんがいいかな？"
 	];
 	
 	$res2 = [
@@ -213,7 +207,7 @@ if($type != "text"){
 			"type" => "carousel",
 			"columns" => [
 				[
-					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/planner01.png",
+					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/eishoku1.png",
 					"title" => "竹岩 祐子",
 					"text" => "この人にする？",
 					"actions" => [
@@ -225,7 +219,7 @@ if($type != "text"){
 					]
 				],
 				[
-					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/planner02.png",
+					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/eishoku2.png",
 					"title" => "福田 泰三",
 					"text" => "この人にする？",
 					"actions" => [
@@ -237,7 +231,7 @@ if($type != "text"){
 					]
 				],
 				[
-					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/planner03.png",
+					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/eishoku3.png",
 					"title" => "保井 花子",
 					"text" => "この人にする？",
 					"actions" => [
@@ -251,15 +245,6 @@ if($type != "text"){
 			]
 		]
 	];
-	
-	
-	
-	
-	
-	
-	
-	
-
 	
 	// 相談開始をしたい言葉
 } else if ($text == '相談開始'){	
