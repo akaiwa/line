@@ -390,7 +390,7 @@ if($type != "text"){
 	curl_setopt($nlcch, CURLOPT_HTTPHEADER, array("Content-Type: application/json", "Accept: application/json"));
 	$nlcresult = curl_exec($nlcch);
 	$resultjson = json_decode($nlcresult, true);
-	$cls = $resultjson["classes"][1]["class_name"];
+	$cls = $resultjson["classes"][0]["class_name"];
 	curl_close($nlcch);
 
 	$res1 = [
