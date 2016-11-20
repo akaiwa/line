@@ -337,7 +337,7 @@ if($type != "text"){
 					"text" => "ここにする？",
 					"actions" => [
 						[
-							"type" => "text",
+							"type" => "message",
 							"label" => "ここに決定",
 							"text" => "1番"
 						]
@@ -349,7 +349,7 @@ if($type != "text"){
 					"text" => "ここにする？",
 					"actions" => [
 						[
-							"type" => "text",
+							"type" => "message",
 							"label" => "ここに決定",
 							"text" => "2番"
 						]
@@ -361,7 +361,7 @@ if($type != "text"){
 					"text" => "ここにする？",
 					"actions" => [
 						[
-							"type" => "text",
+							"type" => "message",
 							"label" => "ここに決定",
 							"text" => "3番"
 						]
