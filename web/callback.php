@@ -376,9 +376,26 @@ if($type != "text"){
 		"text" => "20日14時、新宿のカフェAだね！\nお悩み解決できるよう僕もがんばるよ！"
 	];
 } else {	
+	$nlcurl = "https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/792510x122-nlc-28/classify";
+	$nlcch = curl_init($nlcurl);
+	$USERNAME = "02248a63-76ff-4dc8-92b5-a80944b077ed";
+	$PASSWORD = "2nEYStPrVjHB";
+	$array = array("text" => $text);
+	$postdata  = json_encode($array);
+	curl_setopt($nlcch, CURLOPT_POST, true);
+	curl_setopt($nlcch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($nlcch, CURLOPT_POSTFIELDS, $postdata);
+	curl_setopt($nlcch, CURLOPT_USERPWD, $USERNAME.":".$PASSWORD);
+	curl_setopt($nlcch, CURLOPT_TIMEOUT_MS, 5000);
+	curl_setopt($nlcch, CURLOPT_HTTPHEADER, array("Content-Type: application/json", "Accept: application/json"));
+	$nlcresult = curl_exec($nlcch);
+	$resultjson = json_decode($nlcresult, true);
+	$cls = $resultjson["classes"][1]["class_name"];
+	curl_close($nlcch);
+
 	$res1 = [
 		"type" => "text",
-		"text" => "NLCからの応答"
+		"text" => $cls
 	];
 	
 	$res2 = [
