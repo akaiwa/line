@@ -375,7 +375,7 @@ if($type != "text"){
 		"type" => "text",
 		"text" => "20日14時、新宿のカフェAだね！\nお悩み解決できるよう僕もがんばるよ！"
 	];
-} else if ($text == '応答セヨ') {	
+} else {	
 	$res1 = [
 		"type" => "text",
 		"text" => "NLCからの応答"
