@@ -333,7 +333,7 @@ if($type != "text"){
 			"columns" => [
 				[
 					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/mise1.png",
-					"text" => "カフェ○○",
+					"text" => "カフェA",
 					"actions" => [
 						[
 							"type" => "text",
@@ -344,7 +344,7 @@ if($type != "text"){
 				],
 				[
 					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/mise2.png",
-					"text" => "ファストフード△△",
+					"text" => "ファストフードB",
 					"actions" => [
 						[
 							"type" => "text",
@@ -355,7 +355,7 @@ if($type != "text"){
 				],
 				[
 					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/mise3.png",
-					"text" => "ファミリーレストラン××",
+					"text" => "ファミリーレストランC",
 					"actions" => [
 						[
 							"type" => "text",
@@ -370,7 +370,7 @@ if($type != "text"){
 } else if ($text == '1番') {
 	$res1 = [
 		"type" => "text",
-		"text" => "20日14時、新宿のカフェ○○だね！\nお悩み解決できるよう僕もがんばるよ！"
+		"text" => "20日14時、新宿のカフェAだね！\nお悩み解決できるよう僕もがんばるよ！"
 	];
 } else if ($text == '応答セヨ') {	
 	$res1 = [
