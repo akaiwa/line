@@ -333,6 +333,7 @@ if($type != "text"){
 			"columns" => [
 				[
 					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/mise1.png",
+					"title" => "カフェA",
 					"text" => "カフェA",
 					"actions" => [
 						[
@@ -344,6 +345,7 @@ if($type != "text"){
 				],
 				[
 					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/mise2.png",
+					"title" => "ファストフードB",
 					"text" => "ファストフードB",
 					"actions" => [
 						[
@@ -355,6 +357,7 @@ if($type != "text"){
 				],
 				[
 					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/mise3.png",
+					"title" => "ファミリーレストランC",
 					"text" => "ファミリーレストランC",
 					"actions" => [
 						[
