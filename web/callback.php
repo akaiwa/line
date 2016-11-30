@@ -375,7 +375,7 @@ if($type != "text"){
 	
 	$res1 = [
 		"type" => "text",
-		"text" => $texttest
+		"text" => $testtext
 	];
 } else {	
 	$nlcurl = "https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/b238f1x131-nlc-1159/classify";
