@@ -393,7 +393,7 @@ if($type != "text"){
 	$cls = $resultjson["classes"][0]["class_name"];
 	curl_close($nlcch);
 	
-	$cls = str_replace('\\', '＼', $cls);
+	$cls = str_replace('\\', '\', $cls);
 
 	$res1 = [
 		"type" => "text",
