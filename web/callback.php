@@ -392,12 +392,15 @@ if($type != "text"){
 	$resultjson = json_decode($nlcresult, true);
 	$cls = $resultjson["classes"][0]["class_name"];
 	curl_close($nlcch);
+	
+	$cls = preg_replace('/\\\\/u', '\', $cls);
 
 	$res1 = [
 		"type" => "text",
 		"text" => $cls
 	];
 	
+		
 	$res2 = [
 		"type" => "template",
 		"altText" => "よかったら君にピッタリのマイライフプランアドバイザーを紹介させてほしいんだけど、どうかな？",
