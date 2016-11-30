@@ -395,8 +395,8 @@ if($type != "text"){
 	$cls = $resultjson["classes"][0]["class_name"];
 	curl_close($nlcch);
 	
-//	$cls = str_replace('\\', '\', $cls);
-
+	$cls = stripslashes($cls);
+	
 	$res1 = [
 		"type" => "text",
 		"text" => $cls
