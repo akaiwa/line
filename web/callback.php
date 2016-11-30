@@ -371,9 +371,11 @@ if($type != "text"){
 		]
 	];
 } else if ($text == '1番') {
+	$testtext = "20日14時、新宿のカフェAだね！\nお悩み解決できるよう僕もがんばるよ！";
+	
 	$res1 = [
 		"type" => "text",
-		"text" => "20日14時、新宿のカフェAだね！\nお悩み解決できるよう僕もがんばるよ！"
+		"text" => $texttest
 	];
 } else {	
 	$nlcurl = "https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/b238f1x131-nlc-1159/classify";
@@ -393,7 +395,7 @@ if($type != "text"){
 	$cls = $resultjson["classes"][0]["class_name"];
 	curl_close($nlcch);
 	
-	$cls = str_replace('\\', '\', $cls);
+//	$cls = str_replace('\\', '\', $cls);
 
 	$res1 = [
 		"type" => "text",
