@@ -397,11 +397,11 @@ if($type != "text"){
 	
 	$cls = stripslashes($cls);
 	
-	$test = (String)$cls;
+	$test = (string)$cls;
 		
 	$res1 = [
 		"type" => "text",
-		"text" => $cutjson
+		"text" => $test
 	];
 	
 		
