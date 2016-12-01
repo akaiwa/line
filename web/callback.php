@@ -395,6 +395,22 @@ if($type != "text"){
 	$cls = $resultjson["classes"][0]["class_name"];
 	curl_close($nlcch);
 	
+	$filename = './json.txt';
+if (!file_exists($filename)) {
+	touch($filename);
+} else {
+	echo ('すでにファイルが存在しています。file name:' . $filename);
+}
+
+$fp = fopen($filename,'a') or dir('ファイルを開けません');
+
+fwrite($fp, $nlcresult);
+
+fclose($fp);
+	
+	
+	
+	
 	$cls = stripslashes($cls);
 	
 	$res1 = [
