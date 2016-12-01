@@ -397,8 +397,8 @@ if($type != "text"){
 	
 	$cls = stripslashes($cls);
 	
-	$cutjson = substr($resultjson, 0, 1999)
-	
+	$test = (String)$cls;
+		
 	$res1 = [
 		"type" => "text",
 		"text" => $cutjson
