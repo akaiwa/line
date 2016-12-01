@@ -378,7 +378,7 @@ if($type != "text"){
 		"text" => $testtext
 	];
 } else {	
-	$nlcurl = "https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/b238f1x131-nlc-1159/classify";
+	$nlcurl = "https://watson-api-explorer.mybluemix.net/natural-language-classifier/api/v1/classifiers/8d6ce2x125-nlc-3284/classify";
 	$nlcch = curl_init($nlcurl);
 	$USERNAME = "02248a63-76ff-4dc8-92b5-a80944b077ed";
 	$PASSWORD = "2nEYStPrVjHB";
@@ -394,8 +394,6 @@ if($type != "text"){
 	$resultjson = json_decode($nlcresult, true);
 	$cls = $resultjson["classes"][0]["class_name"];
 	curl_close($nlcch);
-	
-	$cls = stripslashes($cls);
 	
 	$test = (string)$cls;
 		
